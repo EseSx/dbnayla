@@ -32,7 +32,6 @@ def menu_principal():
     print("1. Proveedores")
     print("2. Productos")
     print("3. Ventas")
-    print("4. Salir")
 
 def manejar_proveedor():
     while True:
@@ -115,4 +114,20 @@ def manejar_venta():
             print("Venta actualizada con éxito.")
         elif opcion == '4':
             venta_id
-    main()
+        elif opcion == '5':
+            break
+        else:
+            print("Opción inválida.")
+
+while True:
+    menu_principal()
+    opcion = input("Seleccione una opcion: ")
+    match opcion:
+        case "1":
+            manejar_proveedor()
+        case "2":
+            manejar_producto()
+        case "3":
+            manejar_venta()
+        case _ :
+            print("Opcion no valida")
